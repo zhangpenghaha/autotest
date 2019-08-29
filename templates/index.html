@@ -5,7 +5,15 @@
 <title>我的网站</title>
 </head>
 <body>
-<h1>欢迎光临我的网站！</h1>
+<h1>登录</h1>
+<form action="" method="post" action="login">
+    {% csrf_token %}
+    <br><input type="text" name="username" placeholder="username">
+    <br><input type="password" name="password" placeholder="password">
+    {% error %}
+    <br> <button id="submit" type="submit">登录</button>
+
+</form>
 </body>
 </html>
 
