@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^04*s%sbgng8=jct)d6m+)*5jct0c)s90u$y4bl!ill9$0u$v*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -79,8 +79,15 @@ WSGI_APPLICATION = 'autotest.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME' : 'autotest',
+        'USER' : 'root',
+        'PASSWORD' : '123456',
+        'HOST' : '127.0.0.1',
+        'PORT' : '3306'
+
     }
 }
 

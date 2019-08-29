@@ -1,8 +1,8 @@
-<CTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>我的网站</title>
+    <meta charset="UTF-8">
+    <title>测试大佬</title>
 </head>
 <body>
 <h1>登录</h1>
@@ -10,10 +10,9 @@
     {% csrf_token %}
     <br><input type="text" name="username" placeholder="username">
     <br><input type="password" name="password" placeholder="password">
-    {% error %}
+    {{ error }}
     <br> <button id="submit" type="submit">登录</button>
 
 </form>
 </body>
 </html>
-
