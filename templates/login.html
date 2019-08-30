@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>测试大佬</title>
+    <style type="text/css">
+        body{
+            text-align: center;
+            background-color: aliceblue;
+        }
+    </style>
 </head>
 <body>
-<h1>登录</h1>
-<form  method="post" action="login">
+<div class="login">
+
+<h1>自动化测试平台</h1>
+<form  method="post" action="/login_check/">
     {% csrf_token %}
-    <br><input type="text" name="username" placeholder="username">
-    <br><input type="password" name="password" placeholder="password">
-    {{ error }}
-    <br> <button id="submit" type="submit">登录</button>
+    <br><input type="text" name="username" placeholder="请输入用户名">
+    <br><input type="password" name="password" placeholder="请输入密码">
+    <br>{{ error }}<br>
+    <br> &nbsp<button id="submit" type="submit" style="width:180px ;height: 30px">登录</button>
 
 </form>
+</div>
 </body>
 </html>
