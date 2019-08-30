@@ -18,8 +18,5 @@ from django.urls import path,include
 from apitest import views
 from django.conf.urls import url
 urlpatterns = [
-    path('admin/', admin.site.urls),
-  ##  path('', include('apitest.urls')),
-    path('test/', views.test),
-    path('login', views.login),
+    url('', views.test),
 ]
