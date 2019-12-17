@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 from apitest import views
 from django.conf.urls import url
+from product import proviews
 urlpatterns = [
     path('admin/', admin.site.urls),
   ##  path('', include('apitest.urls')),
@@ -24,6 +25,13 @@ urlpatterns = [
     path('login/', views.login),
     path('home/', views.home),
     path('logout/', views.logout),
-    path('login_check/', views.login_check)
-
+    path('login_check/', views.login_check),
+    path("product_manage/", proviews.product_manage),
+    path('apitest_manage/', views.apitest_manage),
+    path('apistep_manage/', views.apistep_manage),
+    path('apis_manage/', views.apis_manage),
 ]
+
+
+
+
