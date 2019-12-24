@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'apitest',
     'product',
     'bootstrap4',
+    # 'apptest', #加入
+    'webtest', #加入
 ]
 
 MIDDLEWARE = [

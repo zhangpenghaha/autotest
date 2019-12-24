@@ -18,6 +18,7 @@ from django.urls import path,include
 from apitest import views
 from django.conf.urls import url
 from product import proviews
+from webtest import webviews
 urlpatterns = [
     path('admin/', admin.site.urls),
   ##  path('', include('apitest.urls')),
@@ -30,6 +31,8 @@ urlpatterns = [
     path('apitest_manage/', views.apitest_manage),
     path('apistep_manage/', views.apistep_manage),
     path('apis_manage/', views.apis_manage),
+    path('webcase_manage/', webviews.webcase_manage),
+    path('webcasestep_manage/', webviews.webcasestep_manage),
 ]
 
 
